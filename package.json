@@ -9,10 +9,11 @@
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro",
-        "build:ci": "LANG=en astro build && LANG=pt astro build"
+        "update-products": "node convert-products.js"
     },
     "dependencies": {
-        "astro": "^5.5.2"
+        "astro": "^5.5.2",
+        "js-yaml": "^4.1.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [

@@ -1,4 +1,4 @@
-import type { Language } from "../utils/get-lang.js";
+import type { Language } from "../src/utils/get-lang.js";
 import { products as products_en } from "./products_en.gen.js";
 import { products as products_pt } from "./products_pt.gen.js";
 

@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../schema.yaml
+general:
+    name: "PA-01"
+    shortDescription: "Preamplificador Portátil para Microfone Dinâmico"
+    longDescription: "O PA-01 é um preamplificador analógico portátil pensado especialmente para vocal com microfones dinâmicos e para o uso com pedais de guitarra. Aumente a profundidade do seu vocal a um custo muito mais baixo que com pedais de voz e com qualidade profissional."
+    coverPic: "cover.webp"
+    purchaseLink: "https://puchase.link/forproduct.html"
+
+overview:
+    bulletPoints:
+        - "Entrada balanceada"
+        - "Design compacto"
+        - "Perfeito para seu pedalboard"
+    bulletVideo: "render_pano.webm"
+    tagline: "Compacto e versátil"
+    taglinePic: "render2.webp"
+    demoVideo: "demo.webm"
+
+specs:
+    abstract: "As características do PA-01 foram pensadas para maximizar a compatibilidade com pedais convencionais de guitarra, permitindo, assim, que você aproveite toda sua coleção de pedais também na voz. A entrada balanceada proporciona maior imunidade contra ruídos do que adaptadores simples, trazendo assim maior confiabilidade para o seu setup."
+    productLineart: "lineart.webp"
+    specTable:
+        - "Impedância de Entrada: 1,2 kΩ"
+        - "Impedância de Saída: < 50 Ω"
+        - "Ganho Mínimo: 5 dB"
+        - "Ganho Máximo: 40 dB"
+        - "Nível Máximo de Saída: 5 Vrms"
+        - "SNR: > 85 dB"
+        - "Tensão de Alimentação: 9 V DC (padrão Boss)"
+        - "Consumo: 15 mA"
+        - "Dimensões: 10 x 2,5 x 3,5 cm"
+        - "Comprimento do Cabo: 20 cm"
+        - "Peso: 135 g"
+    specImage: "freq_response.webp"
+    additional: "Pensamos a curva de resposta do PA-01 especialmente para acentuar as ressonâncias mais desejáveis da voz, em torno de 5kHz, e atenuar os graves próprios dos microfones dinâmicos e possível efeito proximidade."
+    qualiyPoints:
+        - "Capacitores Nichicon"
+        - "Componentes de baixo ruído"
+        - "Construção robusta"
+        - "Testados individualmente"
+    internalsPic: "internals.webp"
+    boxContents:
+        - "PA-01"
+        - "Ficha Técnica"
+    contentsPic: "box_contents.webp"
+
+files:
+    docSet:
+        "Manual": "pa01_manual.pdf"

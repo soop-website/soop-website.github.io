@@ -1,0 +1,104 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+type: object
+properties:
+  general:
+    type: object
+    properties:
+      name:
+        type: string
+      shortDescription:
+        type: string
+      longDescription:
+        type: string
+      coverPic:
+        type: string
+        pattern: "^.+\\.webp$"
+      purchaseLink:
+        type: string
+    required:
+      - name
+      - shortDescription
+      - longDescription
+      - coverPic
+      - purchaseLink
+  overview:
+    type: object
+    properties:
+      bulletPoints:
+        type: array
+        items:
+          type: string
+      bulletVideo:
+        type: string
+        pattern: "^.+\\.webm$"
+      tagline:
+        type: string
+      taglinePic:
+        type: string
+        pattern: "^.+\\.webp$"
+      demoVideo:
+        type: string
+        pattern: "^.+\\.webm$"
+    required:
+      - bulletPoints
+      - bulletVideo
+      - tagline
+      - taglinePic
+      - demoVideo
+  specs:
+    type: object
+    properties:
+      abstract:
+        type: string
+      productLineart:
+        type: string
+        pattern: "^.+\\.webp$"
+      specTable:
+        type: array
+        items:
+          type: string
+      specImage:
+        type: string
+        pattern: "^.+\\.webp$"
+      additional:
+        type: string
+      qualiyPoints:
+        type: array
+        items:
+          type: string
+      internalsPic:
+        type: string
+        pattern: "^.+\\.webp$"
+      boxContents:
+        type: array
+        items:
+          type: string
+      contentsPic:
+        type: string
+        pattern: "^.+\\.webp$"
+    required:
+      - abstract
+      - productLineart
+      - specTable
+      - specImage
+      - additional
+      - qualiyPoints
+      - internalsPic
+      - boxContents
+      - contentsPic
+  files:
+    type: object
+    properties:
+      docSet:
+        type: object
+        patternProperties:
+          "^.+$":
+            type: string
+        additionalProperties: false
+    required:
+      - docSet
+required:
+  - general
+  - overview
+  - specs
+  - files

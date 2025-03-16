@@ -35,6 +35,9 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
+            - name: Update product data
+              run: pnpm run update-products
+
             - name: Build English (Global) version
               run: pnpm run build
               env:
