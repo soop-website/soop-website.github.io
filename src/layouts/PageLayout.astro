@@ -3,6 +3,7 @@ import "../styles/global.css";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Posthog from "../components/posthog.astro";
 interface Props {
     title?: string;
     description?: string;
@@ -20,6 +21,7 @@ const { title = "Soop", description = "Default description for Soop website" } =
         <meta name="description" content={description} />
         <!-- TODO: add opengraph attributes for SEO and embedding -->
         <title>{title}</title>
+        <Posthog />
     </head>
     <body>
         <Header />
