@@ -1,0 +1,38 @@
+<!DOCTYPE html><!-- TODO: get lang dynamically --><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Confira os produtos da Soop Studio"><!-- TODO: add opengraph attributes for SEO and embedding --><title>Produtos | Soop</title><link rel="stylesheet" href="/_astro/about.CfVQWjva.css">
+<style>.product-card[data-astro-cid-tjdfhdqb]{margin-block:3rem 0;width:min(1200px,100%);height:35rem;display:grid;grid-template-areas:"image title" "image desc";column-gap:3rem;row-gap:1rem;grid-template-rows:10rem;text-align:left;grid-template-columns:45vw 1fr}.product-card-image[data-astro-cid-tjdfhdqb]{grid-area:image;height:35rem;width:min(1205px,86.2vw);object-fit:cover;position:absolute;z-index:10;transition:width .4s ease-out}.product-card-desc[data-astro-cid-tjdfhdqb]{grid-area:desc;display:block;font-size:var(--fs-m);width:25rem}.product-card-title[data-astro-cid-tjdfhdqb]{grid-area:title;display:block;font-size:var(--fs-xl);width:25rem;align-self:flex-end}.product-card[data-astro-cid-tjdfhdqb].inverted{grid-template-areas:"title image" "desc image";text-align:right;grid-template-columns:1fr 45vw;justify-content:right}.product-card-image[data-astro-cid-tjdfhdqb].inverted,.product-card-title[data-astro-cid-tjdfhdqb].inverted,.product-card-desc[data-astro-cid-tjdfhdqb].inverted{justify-self:right}.product-card[data-astro-cid-tjdfhdqb]:hover>.product-card-image[data-astro-cid-tjdfhdqb],.product-card[data-astro-cid-tjdfhdqb].open>.product-card-image[data-astro-cid-tjdfhdqb]{width:45vw}@media (max-width: 768px){.product-card[data-astro-cid-tjdfhdqb],.product-card[data-astro-cid-tjdfhdqb].inverted{width:90vw;height:auto;grid-template-columns:1fr;grid-template-rows:80vw 4rem 1fr;grid-template-areas:"image" "title" "desc";margin-block:unset;justify-content:center;text-align:center;background-color:var(--background-dark-color);border-radius:var(--rounded-radius);padding-bottom:2rem}.product-card[data-astro-cid-tjdfhdqb].inverted{margin-top:3rem}.product-card-image[data-astro-cid-tjdfhdqb]{position:static;width:100%;height:100%;background-color:var(--background-light-color);border-radius:var(--rounded-radius) var(--rounded-radius) 0px 0px}.product-card-title[data-astro-cid-tjdfhdqb],.product-card-desc[data-astro-cid-tjdfhdqb],.product-card-title[data-astro-cid-tjdfhdqb].inverted,.product-card-desc[data-astro-cid-tjdfhdqb].inverted{background-color:var(--background-dark-color);color:var(--background-light-color);width:85%;justify-self:center}.product-card-title[data-astro-cid-tjdfhdqb],.product-card-title[data-astro-cid-tjdfhdqb].inverted{font-size:var(--fs-xxl)}.product-card[data-astro-cid-tjdfhdqb]:hover>.product-card-image[data-astro-cid-tjdfhdqb],.product-card[data-astro-cid-tjdfhdqb].open>.product-card-image[data-astro-cid-tjdfhdqb]{width:unset}}
+.ts-title[data-astro-cid-denelpfh]{font-size:var(--fs-hero);text-transform:uppercase;font-weight:800}.ts-subtitle[data-astro-cid-denelpfh]{font-size:var(--fs-m);text-align:center;margin-inline:5%;white-space:nowrap}@media (max-width: 768px){.title-subtitle[data-astro-cid-denelpfh]{margin-block:1.5rem 0rem;width:90%;word-wrap:normal}.ts-subtitle[data-astro-cid-denelpfh]{white-space:initial}}
+</style></head> <body> <header class="App-header"> <a class="logo-container" href="/"> <img src="/logo.svg" class="App-logo" alt="logo"> </a> <nav class="closed"> <ul class="menu closed"> <li class="hamburger-toggle"> <a href="#" id="menu-toggle"> <img class="menu-icon" src="/_astro/menu.Bvn0LJW7.svg" alt="Menu Toggle" id="menu-icon"> </a> </li> <li><a href="/">Home</a></li> <li><a href="/products">Produtos</a></li> <li><a href="/about">Sobre Nós</a></li> <li class="location-switch"> <a href="/global" title="Ir para Soop Global"> 🌐 </a> </li> </ul> </nav> </header> <script>(function(){const menuIconUrl = "/_astro/menu.Bvn0LJW7.svg";
+const closeIconUrl = "/_astro/close.3w_OPPSk.svg";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav");
+        const menu = document.querySelector(".menu");
+        const menuIconElement = document.getElementById("menu-icon");
+
+        let menuOpen = false;
+
+        menuToggle?.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                nav?.classList.remove("closed");
+                menu?.classList.remove("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = closeIconUrl;
+                }
+            } else {
+                nav?.classList.add("closed");
+                menu?.classList.add("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = menuIconUrl;
+                }
+            }
+        });
+    });
+})();</script> <main>  <section class="light-section center"> <div class="title-subtitle center" data-astro-cid-denelpfh> <h1 class="ts-title" data-astro-cid-denelpfh>Produtos</h1> <p class="ts-subtitle" data-astro-cid-denelpfh>Confira nossa linha de produtos:</p> </div>  <a href="/products/pa01/" class="product-card open" data-astro-cid-tjdfhdqb><img class="product-card-image" src="/product_files/pa01/cover.webp" alt="PA-01" data-astro-cid-tjdfhdqb><h2 class="product-card-title" data-astro-cid-tjdfhdqb>PA-01</h2><p class="product-card-desc" data-astro-cid-tjdfhdqb>O PA-01 é um preamplificador analógico portátil pensado especialmente para vocal com microfones dinâmicos e para o uso com pedais de guitarra. Aumente a profundidade do seu vocal a um custo muito mais baixo que com pedais de voz e com qualidade profissional.</p></a> </section>  </main> <footer> <div class="contact-info"> <div class="mail"> <a href="mailto:hello@soop.studio"> <img src="/_astro/mail.DLl4gzN3_Z23IIfm.svg" alt="Email" width="31" height="31" loading="lazy" decoding="async">
+hello@soop.studio
+</a> </div> <div class="whatsapp"> <a href="https://wa.me/554189042648"> <img src="/_astro/whatsapp.CqJp2kcu_RgW5e.svg" alt="Whatsapp" width="24" height="24" loading="lazy" decoding="async">
++55 (41) 8904-2648
+</a> </div> </div> <div class="social-links"> <div class="socials-title">Redes Sociais</div> <div class="social-icons"> <a href="https://tiktok.com/@soop.studio"> <img src="/_astro/tiktok.EYc8Jez3_14MBFx.svg" alt="TikTok" width="36" height="36" loading="lazy" decoding="async" class="social-icon"> </a> <a href="https://instagram.com/soop_br"> <img src="/_astro/instagram.ChlV0GcY_Z2fk433.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" class="social-icon"> </a> <a href="https://youtube.com/@Soop.Studio"> <img src="/_astro/youtube.CSdJVPKe_zjqjR.svg" alt="Youtube" width="44" height="44" loading="lazy" decoding="async" class="social-icon"> </a> </div> </div> </footer> </body></html>

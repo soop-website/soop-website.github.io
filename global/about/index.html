@@ -1,0 +1,62 @@
+<!DOCTYPE html><!-- TODO: get lang dynamically --><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Conheça a história e equipe da Soop"><!-- TODO: add opengraph attributes for SEO and embedding --><title>Sobre Nós | Soop</title><link rel="stylesheet" href="/_astro/about.CfVQWjva.css">
+<style>.ts-title[data-astro-cid-denelpfh]{font-size:var(--fs-hero);text-transform:uppercase;font-weight:800}.ts-subtitle[data-astro-cid-denelpfh]{font-size:var(--fs-m);text-align:center;margin-inline:5%;white-space:nowrap}@media (max-width: 768px){.title-subtitle[data-astro-cid-denelpfh]{margin-block:1.5rem 0rem;width:90%;word-wrap:normal}.ts-subtitle[data-astro-cid-denelpfh]{white-space:initial}}
+.person-card[data-astro-cid-uaw6cg4a]{width:80%;margin-inline:auto;margin-block:2rem;display:grid;grid-template-columns:repeat(2,1fr);grid-template-areas:"info photo"}.person-card[data-astro-cid-uaw6cg4a].inverted{text-align:right;grid-template-areas:"photo info"}.person-card-info[data-astro-cid-uaw6cg4a]{grid-area:info;padding:2rem}.person-card-photo[data-astro-cid-uaw6cg4a]{grid-area:photo;padding:2rem}.person-card-name[data-astro-cid-uaw6cg4a]{font-weight:600;font-size:var(--fs-hero)}.person-card-role[data-astro-cid-uaw6cg4a]{font-size:var(--fs-xl)}.person-card-desc[data-astro-cid-uaw6cg4a]{font-size:var(--fs-m)}@media (max-width: 768px){.person-card[data-astro-cid-uaw6cg4a],.person-card[data-astro-cid-uaw6cg4a].inverted{grid-template-areas:"photo" "info";grid-template-columns:1fr;text-align:left;margin-block:2rem}.person-card-info[data-astro-cid-uaw6cg4a]{padding:1rem}.person-card-photo[data-astro-cid-uaw6cg4a]{padding:0}}.logo-mockup{padding:1rem;margin-top:2rem}
+</style></head> <body> <header class="App-header"> <a class="logo-container" href="/"> <img src="/logo.svg" class="App-logo" alt="logo"> </a> <nav class="closed"> <ul class="menu closed"> <li class="hamburger-toggle"> <a href="#" id="menu-toggle"> <img class="menu-icon" src="/_astro/menu.Bvn0LJW7.svg" alt="Menu Toggle" id="menu-icon"> </a> </li> <li><a href="/">Home</a></li> <li><a href="/products">Produtos</a></li> <li><a href="/about">Sobre Nós</a></li> <li class="location-switch"> <a href="/global" title="Ir para Soop Global"> 🌐 </a> </li> </ul> </nav> </header> <script>(function(){const menuIconUrl = "/_astro/menu.Bvn0LJW7.svg";
+const closeIconUrl = "/_astro/close.3w_OPPSk.svg";
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav");
+        const menu = document.querySelector(".menu");
+        const menuIconElement = document.getElementById("menu-icon");
+
+        let menuOpen = false;
+
+        menuToggle?.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                nav?.classList.remove("closed");
+                menu?.classList.remove("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = closeIconUrl;
+                }
+            } else {
+                nav?.classList.add("closed");
+                menu?.classList.add("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = menuIconUrl;
+                }
+            }
+        });
+    });
+})();</script> <main>  <section class="light-section max1200"> <div class="title-subtitle center" data-astro-cid-denelpfh> <h1 class="ts-title" data-astro-cid-denelpfh>Sobre Nós</h1>  </div>  <div class="two-columns"> <p class="side-paragraph left">
+A Soop surgiu... Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptas velit esse officia, distinctio
+                tempora voluptatibus deleniti tenetur consequuntur omnis, natus
+                deserunt ducimus quia fugiat molestias, possimus quidem iste
+                repudiandae asperiores! Voluptas accusantium laboriosam ex in
+                architecto sunt natus quam repellendus, ea, iusto animi quis
+                beatae harum nisi minus ratione nobis modi? Eveniet deserunt et
+                eum hic id maxime facilis! Beatae!
+</p> <img class="right logo-mockup" src="/media/logo_mockup.webp" alt=""> </div> </section> <section class="dark-section center max1200"> <div class="title-subtitle center" data-astro-cid-denelpfh> <h1 class="ts-title" data-astro-cid-denelpfh>Conheça a Equipe</h1>  </div>  <div class="person-card " data-astro-cid-uaw6cg4a> <div class="person-card-info" data-astro-cid-uaw6cg4a> <h2 class="person-card-name" data-astro-cid-uaw6cg4a>Yuri Kasper</h2> <p class="person-card-role" data-astro-cid-uaw6cg4a>CEO</p> <p class="person-card-desc" data-astro-cid-uaw6cg4a>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+</p> </div> <img class="person-card-photo" src="https://placehold.co/600?text=Foto+Yuri" alt="portrait photo" data-astro-cid-uaw6cg4a> </div>  <div class="person-card inverted" data-astro-cid-uaw6cg4a> <div class="person-card-info" data-astro-cid-uaw6cg4a> <h2 class="person-card-name" data-astro-cid-uaw6cg4a>Christian Kasper</h2> <p class="person-card-role" data-astro-cid-uaw6cg4a>CTO</p> <p class="person-card-desc" data-astro-cid-uaw6cg4a>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+</p> </div> <img class="person-card-photo" src="https://placehold.co/600?text=Foto+Max" alt="portrait photo" data-astro-cid-uaw6cg4a> </div>  <div class="person-card " data-astro-cid-uaw6cg4a> <div class="person-card-info" data-astro-cid-uaw6cg4a> <h2 class="person-card-name" data-astro-cid-uaw6cg4a>Melissa Luna</h2> <p class="person-card-role" data-astro-cid-uaw6cg4a>Head de Marketing</p> <p class="person-card-desc" data-astro-cid-uaw6cg4a>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+</p> </div> <img class="person-card-photo" src="https://placehold.co/600?text=Foto+Melissa" alt="portrait photo" data-astro-cid-uaw6cg4a> </div>  </section>  </main> <footer> <div class="contact-info"> <div class="mail"> <a href="mailto:hello@soop.studio"> <img src="/_astro/mail.DLl4gzN3_Z23IIfm.svg" alt="Email" width="31" height="31" loading="lazy" decoding="async">
+hello@soop.studio
+</a> </div> <div class="whatsapp"> <a href="https://wa.me/554189042648"> <img src="/_astro/whatsapp.CqJp2kcu_RgW5e.svg" alt="Whatsapp" width="24" height="24" loading="lazy" decoding="async">
++55 (41) 8904-2648
+</a> </div> </div> <div class="social-links"> <div class="socials-title">Redes Sociais</div> <div class="social-icons"> <a href="https://tiktok.com/@soop.studio"> <img src="/_astro/tiktok.EYc8Jez3_14MBFx.svg" alt="TikTok" width="36" height="36" loading="lazy" decoding="async" class="social-icon"> </a> <a href="https://instagram.com/soop_br"> <img src="/_astro/instagram.ChlV0GcY_Z2fk433.svg" alt="Instagram" width="38" height="38" loading="lazy" decoding="async" class="social-icon"> </a> <a href="https://youtube.com/@Soop.Studio"> <img src="/_astro/youtube.CSdJVPKe_zjqjR.svg" alt="Youtube" width="44" height="44" loading="lazy" decoding="async" class="social-icon"> </a> </div> </div> </footer> </body></html>
