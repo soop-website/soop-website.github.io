@@ -1,6 +1,7 @@
 {
     "name": "soop-website",
     "type": "module",
+    "module": "es2022",
     "version": "0.0.1",
     "packageManager": "pnpm@10.6.2",
     "scripts": {
@@ -12,5 +13,11 @@
     },
     "dependencies": {
         "astro": "^5.5.2"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "esbuild",
+            "sharp"
+        ]
     }
 }
