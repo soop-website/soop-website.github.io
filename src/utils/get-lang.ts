@@ -21,3 +21,27 @@ export function getOutDir(): string {
             return `${baseOutDir}/br`;
     }
 }
+
+export function getPathForLang(path: string): string {
+    const lang = getLang();
+    let langPrefix = "en";
+    switch (lang) {
+        case "en":
+            langPrefix = "global";
+            break;
+        case "pt":
+            langPrefix = "br";
+            break;
+    }
+    return `/${langPrefix}${path}`;
+}
+
+export function getLangSwitchPath(): string {
+    const lang = getLang();
+    switch (lang) {
+        case "en":
+            return "/br";
+        case "pt":
+            return "/global";
+    }
+}

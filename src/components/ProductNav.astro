@@ -1,4 +1,6 @@
 ---
+import { getPathForLang } from "../utils/get-lang";
+
 interface Props {
     title: string;
     selected: number;
@@ -9,9 +11,9 @@ interface Props {
 const { title, selected, purchaseLink, productSlug } = Astro.props;
 
 // Build absolute paths for each link
-const overviewUrl = `/products/${productSlug}/`;
-const specsUrl = `/products/${productSlug}/specs/`;
-const filesUrl = `/products/${productSlug}/files/`;
+const overviewUrl = getPathForLang(`/products/${productSlug}/`);
+const specsUrl = getPathForLang(`/products/${productSlug}/specs/`);
+const filesUrl = getPathForLang(`/products/${productSlug}/files/`);
 ---
 
 <div class="product-nav">

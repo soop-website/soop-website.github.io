@@ -1,4 +1,6 @@
 ---
+import { getPathForLang } from "../utils/get-lang";
+
 interface Props {
     title: string;
     pageId: string;
@@ -13,7 +15,7 @@ const { title, pageId, image, inverted = false, open = false } = Astro.props;
 {
     inverted ? (
         <a
-            href={`/products/${pageId}/`}
+            href={getPathForLang(`/products/${pageId}/`)}
             class={`product-card inverted ${open ? "open" : ""}`}
         >
             <h2 class="product-card-title inverted">{title}</h2>
@@ -24,7 +26,7 @@ const { title, pageId, image, inverted = false, open = false } = Astro.props;
         </a>
     ) : (
         <a
-            href={`/products/${pageId}/`}
+            href={getPathForLang(`/products/${pageId}/`)}
             class={`product-card ${open ? "open" : ""}`}
         >
             <img class="product-card-image" src={image} alt={title} />
