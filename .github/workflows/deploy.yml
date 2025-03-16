@@ -29,10 +29,18 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Build English (Global) version
-              run: LANG=en pnpm run build
+              run: pnpm run build
+              env:
+                  LANG: en
 
             - name: Build Portuguese (BR) version
-              run: LANG=pt pnpm run build
+              run: pnpm run build
+              env:
+                  LANG: pt
+
+            - name: Copy static files to dist root
+              run: |
+                  cp -r static/* dist/
 
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
