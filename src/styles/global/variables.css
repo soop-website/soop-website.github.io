@@ -1,0 +1,24 @@
+:root {
+    /* background colors */
+    --background-light-color: #eeeeee;
+    --background-dark-color: #0E0E0E;
+    --background-dark-gray: #bdbcbc;
+    --background-medium-gray: #D9D9D9;
+    --background-light-gray: #F2F2F2;
+    --background-hover-color: #b3b3b34f;
+
+    /* text colors */
+    --text-light-color: #FFFFFF;
+    --text-dark-color: #0E0E0E;
+    --text-medium-color: #A0A0A0;
+
+    --fs-xs: 0.8em;
+    --fs-s: 1em;
+    --fs-m: 1.3em;
+    --fs-l: 1.6em;
+    --fs-xl: 2em;
+    --fs-xxl: 2.5em;
+    --fs-hero: 3em;
+
+    --rounded-radius: 20px;
+}

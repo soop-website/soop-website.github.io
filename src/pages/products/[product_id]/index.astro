@@ -1,0 +1,100 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+import TitleSubtitle from "../../../components/TitleSubtitle.astro";
+import ProductNav from "../../../components/ProductNav.astro";
+import BulletList from "../../../components/BulletList.astro";
+import {
+    getAllProductIds,
+    getProductData,
+} from "../../../product_data/get-product-data";
+import { getProductAssetPath } from "../../../utils/get-asset-path";
+import "../../../styles/product.css";
+import { getLang } from "../../../utils/get-lang";
+
+export async function getStaticPaths() {
+    const productIds = getAllProductIds();
+
+    return productIds.map((id) => ({
+        params: { product_id: id },
+    }));
+}
+
+const { product_id } = Astro.params;
+const language = getLang();
+
+const product = getProductData(product_id, language);
+
+// SSG should never get here because it will only generate valid keys
+if (!product) {
+    throw Astro.redirect("/404");
+}
+---
+
+<PageLayout
+    title={`${product.general.name} | Soop`}
+    description={product.general.shortDescription}
+>
+    <div class="product-page">
+        <section class="light-section center">
+            <TitleSubtitle
+                title={product.general.name}
+                subtitle={product.general.shortDescription}
+            />
+            <div class="center">
+                <img
+                    src={getProductAssetPath(
+                        product_id,
+                        product.general.coverPic
+                    )}
+                    class="big-image"
+                    alt={product.general.name}
+                />
+            </div>
+        </section>
+
+        <ProductNav
+            title={product.general.name}
+            selected={0}
+            purchaseLink={product.general.purchaseLink}
+            productSlug={product_id}
+        />
+
+        <section class="light-section two-columns bullet-section">
+            <BulletList items={product.overview.bulletPoints} />
+            <video class="right alpha-video" muted loop autoplay>
+                <source
+                    src={getProductAssetPath(
+                        product_id,
+                        product.overview.bulletVideo
+                    )}
+                    type="video/webm"
+                />
+            </video>
+        </section>
+
+        <section class="dark-section">
+            <p class="long-paragraph">{product.general.longDescription}</p>
+            <div class="two-columns">
+                <img
+                    src={getProductAssetPath(
+                        product_id,
+                        product.overview.taglinePic
+                    )}
+                    alt=""
+                />
+                <p class="side-paragraph">{product.overview.tagline}</p>
+            </div>
+            <div class="center">
+                <video class="demo-video" controls>
+                    <source
+                        src={getProductAssetPath(
+                            product_id,
+                            product.overview.demoVideo
+                        )}
+                        type="video/webm"
+                    />
+                </video>
+            </div>
+        </section>
+    </div>
+</PageLayout>

@@ -1,0 +1,26 @@
+.thumb-caroussel {
+    display: flex;
+    gap: 5rem;
+    overflow-x: scroll;
+    margin-top: 5rem;
+    width: 80%;
+}
+
+.tc-item {
+    display: inline-grid;
+    place-items: center;
+    text-align: center;
+    width: 15rem;
+    min-width: 15rem;
+    height: 18rem;
+    background-color: var(--background-medium-gray);
+    border-radius: var(--rounded-radius);
+    font-size: var(--fs-m);
+}
+
+.tc-item:first-child {
+    margin-left: auto;
+}
+.tc-item:last-child {
+    margin-right: auto;
+}

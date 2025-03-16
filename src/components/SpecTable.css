@@ -1,0 +1,19 @@
+.spec-table {
+    font-size: var(--fs-m);
+    width: 65%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+.st-prop:last-child {
+    background-color: red;
+}
+.st-prop {
+    background-color: var(--background-medium-gray);
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 0.2rem;
+}

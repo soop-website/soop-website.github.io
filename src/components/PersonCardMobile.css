@@ -1,0 +1,17 @@
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .person-card,
+    .person-card.inverted {
+    grid-template-areas: "photo"
+    "info";
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-block: 2rem;
+    }
+    .person-card-info {
+        padding: 1rem;
+    }
+    .person-card-photo {
+        padding: 0;
+    }
+}

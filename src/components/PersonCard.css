@@ -1,0 +1,34 @@
+.person-card {
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "info photo";
+}
+.person-card.inverted {
+    text-align: right;
+    grid-template-areas: "photo info";
+}
+.person-card-info {
+    grid-area: info;
+    padding: 2rem;
+}
+.person-card-photo {
+    grid-area: photo;
+    padding: 2rem;
+}
+
+.person-card-name {
+    font-weight: 600;
+    font-size: var(--fs-hero);
+}
+
+.person-card-role {
+    font-size: var(--fs-xl);
+}
+
+.person-card-desc {
+    font-size: var(--fs-m);
+}

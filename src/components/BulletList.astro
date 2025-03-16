@@ -1,0 +1,33 @@
+---
+interface Props {
+    items: string[];
+    title?: boolean;
+}
+
+const { items, title } = Astro.props;
+---
+
+{
+    items && (
+        <div class="bullet-list place-center">
+            <ul class="bl-list">
+                {items.map((bulletItem, index) => {
+                    if (title && index == 0) {
+                        return (
+                            <li class="bl-list-item bl-list-title">
+                                {bulletItem}
+                            </li>
+                        );
+                    } else {
+                        return <li class="bl-list-item">{bulletItem}</li>;
+                    }
+                })}
+            </ul>
+        </div>
+    )
+}
+
+<style>
+    @import "./BulletList.css";
+    @import "./BulletListMobile.css";
+</style>

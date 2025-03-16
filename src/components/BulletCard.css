@@ -1,0 +1,43 @@
+.bullet-card-image {
+    width: 25rem;
+    grid-area: image;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+    align-self: center;
+    justify-self: right;
+}
+.bullet-card-image.inverted {
+    justify-self: left;
+}
+
+.bullet-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: 
+    "image word";
+    gap: 5rem;
+}
+.bullet-card.inverted {
+    grid-template-areas: 
+    "word image";
+}
+
+.big-word {
+    grid-area: word;
+    align-self: center;
+    justify-self: left;
+    font-size: var(--fs-hero);
+}
+.big-word.inverted {
+    justify-self: right;
+}
+
+.bullet-card-image,
+.bullet-card-image.inverted {
+    justify-self: center;
+}
+.big-word,
+.big-word.inverted {
+    justify-self: center;
+}

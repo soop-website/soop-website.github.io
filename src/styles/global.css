@@ -1,0 +1,6 @@
+/* Import all global styles */
+@import './global/reset.css';
+@import './global/variables.css';
+@import './global/layout.css';
+@import './global/components.css';
+@import './global/responsive.css';

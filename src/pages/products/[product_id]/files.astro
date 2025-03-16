@@ -1,0 +1,78 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+import TitleSubtitle from "../../../components/TitleSubtitle.astro";
+import ProductNav from "../../../components/ProductNav.astro";
+import ThumbCaroussel from "../../../components/ThumbCaroussel.astro";
+import {
+    getAllProductIds,
+    getProductData,
+} from "../../../product_data/get-product-data";
+import { getProductAssetPath } from "../../../utils/get-asset-path";
+import { getLang } from "../../../utils/get-lang";
+
+export async function getStaticPaths() {
+    const productIds = getAllProductIds();
+
+    return productIds.map((id) => ({
+        params: { product_id: id },
+    }));
+}
+
+const { product_id } = Astro.params;
+const language = getLang();
+
+const product = getProductData(product_id, language);
+
+// SSG should never get here because it will only generate valid keys
+if (!product) {
+    throw Astro.redirect("/404");
+}
+
+const docSet = Object.entries(product.files.docSet).map(
+    ([docTitle, docPath]) => {
+        return {
+            title: docTitle,
+            link: getProductAssetPath(product_id, docPath),
+        };
+    }
+);
+---
+
+<PageLayout
+    title={`${product.general.name} | Arquivos e mais | Soop`}
+    description={`Documentação, manuais e recursos para ${product.general.name}`}
+>
+    <div class="product-page">
+        <section class="light-section center">
+            <TitleSubtitle
+                title={product.general.name}
+                subtitle="Arquivos e mais"
+            />
+
+            <div class="center">
+                <ThumbCaroussel items={docSet} />
+            </div>
+        </section>
+
+        <ProductNav
+            title={product.general.name}
+            selected={2}
+            purchaseLink={product.general.purchaseLink}
+            productSlug={product_id}
+        />
+
+        <section class="dark-section two-columns">
+            <img
+                class="left top-2"
+                src="/media/repair.jpg"
+                alt="Suporte e garantia"
+            />
+            <p class="side-paragraph">
+                Informação sobre garantia. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Laboriosam, incidunt magnam. Quam
+                dolore quas magni atque ea ad sed sint ut sequi provident
+                expedita, non qui illum, in voluptates numquam?
+            </p>
+        </section>
+    </div>
+</PageLayout>

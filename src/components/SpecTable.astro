@@ -1,0 +1,30 @@
+---
+interface Props {
+    specs: string[];
+}
+
+const { specs: data } = Astro.props;
+---
+
+{
+    data && (
+        <table class="spec-table">
+            <tbody>
+                {data.map((spec) => {
+                    const [specName, specValue] = spec.split(": ");
+                    return (
+                        <tr class="st-row">
+                            <td class="st-prop">{specName}</td>
+                            <td class="st-value">{specValue}</td>
+                        </tr>
+                    );
+                })}
+            </tbody>
+        </table>
+    )
+}
+
+<style>
+    @import "./SpecTable.css";
+    @import "./SpecTableMobile.css";
+</style>

@@ -1,0 +1,21 @@
+.bl-list {
+    /* width: 75%; */
+    margin-block: 10%;
+    margin-left: 1rem;
+    font-size: var(--fs-m);
+}
+.bl-list-item {
+    margin-block: 2rem;
+}
+.bl-list-item::marker{
+    content: '-> ';
+}
+
+.bl-list-title {
+    font-size: var(--fs-l);
+    list-style-type: none;
+    margin-left: -2rem;
+}
+.bl-list-title::marker{
+    content: '';
+}

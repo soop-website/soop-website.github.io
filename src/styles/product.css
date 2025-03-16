@@ -1,0 +1,49 @@
+.alpha-video {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.big-image {
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+
+.side-paragraph {
+    width: 80%;
+    font-size: var(--fs-m);
+    place-self: center;
+}
+
+.demo-video {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 85%;
+}
+
+.bullet-section {
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .demo-video {
+        width: 100%;
+    }
+    .big-image {
+        width: 95%;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+    }
+    .alpha-video {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+    .side-paragraph {
+        text-align: left;
+        margin-top: 2rem;
+    }
+}

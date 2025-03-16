@@ -1,0 +1,64 @@
+---
+import BulletCard from "../components/BulletCard.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { getLatestProducts } from "../product_data/get-product-data";
+import { getLang } from "../utils/get-lang";
+
+import PageLayout from "../layouts/PageLayout.astro";
+import { getProductAssetPath } from "../utils/get-asset-path";
+---
+
+<PageLayout title="Soop" description="Soop Studio">
+    <div class="Home">
+        <section class="light-section">
+            <div class="two-columns hero-container">
+                <div class="hero-text left">
+                    FRASE SOBRE PRODUTO VOLTADO PARA MÚSICOS
+                </div>
+                <img
+                    class="hero-image right"
+                    src="media/home_cover.png"
+                    alt=""
+                />
+            </div>
+            <div class="top-3"></div>
+            <p class="long-paragraph max1400">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+                iusto laudantium quos nulla consequuntur aut eveniet enim
+                excepturi fugit, aliquid similique voluptatem. Quidem, minus
+                vero? Minima commodi beatae tenetur reiciendis. Reprehenderit,
+                earum vel, incidunt, eaque excepturi impedit dolorem provident
+                libero quaerat deleniti ut rem ea. Est laboriosam quos voluptas
+                reprehenderit deserunt, nostrum sit amet nobis natus, eos, hic
+                atque quaerat?
+            </p>
+        </section>
+
+        <section class="dark-section center">
+            <BulletCard text="Intuitivo" image="media/render2.png" />
+            <BulletCard text="Acessível" image="media/render1.png" inverted />
+            <BulletCard text="Confiável" image="media/render3.png" />
+        </section>
+
+        <section class="light-section center">
+            {
+                /* display latest 2 products */
+                getLatestProducts(2, getLang()).map((product, index) => {
+                    return (
+                        <ProductCard
+                            inverted={index % 2 !== 0}
+                            title={product.general.name}
+                            image={getProductAssetPath(
+                                product.page,
+                                product.general.coverPic
+                            )}
+                            pageId={product.page}
+                        >
+                            {product.general.longDescription}
+                        </ProductCard>
+                    );
+                })
+            }
+        </section>
+    </div>
+</PageLayout>

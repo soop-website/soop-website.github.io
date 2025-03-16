@@ -1,0 +1,66 @@
+---
+import "./Header.css";
+import "./HeaderMobile.css";
+
+import menuIcon from "../assets/icons/menu.svg";
+import closeIcon from "../assets/icons/close.svg";
+
+const menuIconUrl = menuIcon.src;
+const closeIconUrl = closeIcon.src;
+---
+
+<header class="App-header">
+    <a class="logo-container" href="/">
+        <img src="/logo.svg" class="App-logo" alt="logo" />
+    </a>
+    <nav class="closed">
+        <ul class="menu closed">
+            <li class="hamburger-toggle">
+                <a href="#" id="menu-toggle">
+                    <img
+                        class="menu-icon"
+                        src={menuIconUrl}
+                        alt="Menu Toggle"
+                        id="menu-icon"
+                    />
+                </a>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Produtos</a></li>
+            <li><a href="/about">Sobre Nós</a></li>
+            <li class="location-switch">
+                <a href="/global" title="Ir para Soop Global"> 🌐 </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script define:vars={{ menuIconUrl, closeIconUrl }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav");
+        const menu = document.querySelector(".menu");
+        const menuIconElement = document.getElementById("menu-icon");
+
+        let menuOpen = false;
+
+        menuToggle?.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                nav?.classList.remove("closed");
+                menu?.classList.remove("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = closeIconUrl;
+                }
+            } else {
+                nav?.classList.add("closed");
+                menu?.classList.add("closed");
+                if (menuIconElement) {
+                    menuIconElement.src = menuIconUrl;
+                }
+            }
+        });
+    });
+</script>

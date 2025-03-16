@@ -1,0 +1,53 @@
+/* mobile breakpoints */
+@media(max-width: 700px) {
+    header {
+        width: 100%;
+    }
+    nav {
+        background-color: var(--background-medium-gray);
+        width: auto;
+        height: fit-content;
+        padding-block: 1rem 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--fs-m);
+        margin-top: -1rem;
+    }
+    .menu > li{
+        margin-inline: auto;
+    }
+    .menu > li> a {
+        padding-block: .75rem;
+    }
+    .menu > .hamburger-toggle {
+        margin-left: auto;
+        margin-right: unset;
+    }
+
+    nav.closed {
+        background-color: transparent;
+    }
+    .menu.closed {
+        padding-block: 0;
+        margin-left: auto;
+        margin-top: -1rem;
+        width: min-content;
+        left: unset;
+    }
+    .menu.closed > li {
+        display: none;
+        height: 5rem;
+    }
+    .hamburger-toggle,
+    .menu.closed > .hamburger-toggle {
+        display: block;
+        height: 5rem;
+    }
+}

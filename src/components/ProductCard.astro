@@ -1,0 +1,42 @@
+---
+interface Props {
+    title: string;
+    pageId: string;
+    image: string;
+    inverted?: boolean;
+    open?: boolean;
+}
+
+const { title, pageId, image, inverted = false, open = false } = Astro.props;
+---
+
+{
+    inverted ? (
+        <a
+            href={`/products/${pageId}/`}
+            class={`product-card inverted ${open ? "open" : ""}`}
+        >
+            <h2 class="product-card-title inverted">{title}</h2>
+            <p class="product-card-desc inverted">
+                <slot />
+            </p>
+            <img class="product-card-image inverted" src={image} alt={title} />
+        </a>
+    ) : (
+        <a
+            href={`/products/${pageId}/`}
+            class={`product-card ${open ? "open" : ""}`}
+        >
+            <img class="product-card-image" src={image} alt={title} />
+            <h2 class="product-card-title">{title}</h2>
+            <p class="product-card-desc">
+                <slot />
+            </p>
+        </a>
+    )
+}
+
+<style>
+    @import "./ProductCard.css";
+    @import "./ProductCardMobile.css";
+</style>

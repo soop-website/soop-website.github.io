@@ -1,0 +1,30 @@
+---
+interface Props {
+    text: string;
+    image: string;
+    inverted?: boolean;
+}
+
+const { text, image, inverted = false } = Astro.props;
+---
+
+<div class={inverted ? "bullet-card inverted" : "bullet-card"}>
+    {
+        inverted ? (
+            <>
+                <p class="big-word inverted">{text}</p>
+                <img class="bullet-card-image inverted" src={image} alt="" />
+            </>
+        ) : (
+            <>
+                <img class="bullet-card-image" src={image} alt="" />
+                <p class="big-word">{text}</p>
+            </>
+        )
+    }
+</div>
+
+<style>
+    @import "./BulletCard.css";
+    @import "./BulletCardMobile.css";
+</style>

@@ -1,0 +1,26 @@
+.product-nav {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    color: var(--text-dark-color);
+    background-color: var(--background-light-gray);
+    gap: 4rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.pn-title {
+    margin-left: 5rem;
+    margin-right: auto;
+}
+
+.pn-buy {
+    margin-right: 5rem;
+    color: var(--soop-green);
+}
+
+.pn-selected {
+    color: var(--text-medium-color);
+}

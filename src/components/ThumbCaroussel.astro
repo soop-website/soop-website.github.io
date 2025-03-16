@@ -1,0 +1,29 @@
+---
+interface Item {
+    title: string;
+    link: string;
+}
+
+interface Props {
+    items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+    items && (
+        <div class={`thumb-caroussel ${items.length > 1 ? "multiple" : ""}`}>
+            {items.map((item) => (
+                <a href={item.link} class="tc-item">
+                    {item.title}
+                </a>
+            ))}
+        </div>
+    )
+}
+
+<style>
+    @import "./ThumbCaroussel.css";
+    @import "./ThumbCarousselMobile.css";
+</style>

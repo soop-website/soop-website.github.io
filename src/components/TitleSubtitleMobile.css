@@ -1,0 +1,11 @@
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .title-subtitle {
+        margin-block: 1.5rem 0rem;
+        width: 90%;
+        word-wrap: normal;
+    }
+    .ts-subtitle {
+        white-space: initial;
+    }
+}

@@ -1,0 +1,38 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import TitleSubtitle from "../../components/TitleSubtitle.astro";
+import { getAllProducts } from "../../product_data/get-product-data";
+import { getLang } from "../../utils/get-lang";
+import { getProductAssetPath } from "../../utils/get-asset-path";
+---
+
+<PageLayout
+    title="Produtos | Soop"
+    description="Confira os produtos da Soop Studio"
+>
+    <section class="light-section center">
+        <TitleSubtitle
+            title="Produtos"
+            subtitle="Confira nossa linha de produtos:"
+        />
+        {
+            getAllProducts(getLang()).map((product, index) => {
+                return (
+                    <ProductCard
+                        open
+                        inverted={index % 2 !== 0}
+                        title={product.general.name}
+                        image={getProductAssetPath(
+                            product.page,
+                            product.general.coverPic
+                        )}
+                        pageId={product.page}
+                    >
+                        {product.general.longDescription}
+                    </ProductCard>
+                );
+            })
+        }
+    </section>
+</PageLayout>

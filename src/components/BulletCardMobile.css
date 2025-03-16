@@ -1,0 +1,26 @@
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .bullet-card,
+    .bullet-card.inverted {
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "word";
+        gap: 0;
+        width: 80vw;
+    }
+    .bullet-card > .big-word {
+        background-color: var(--background-light-color);
+        width: 100%;
+        text-align: center;
+        border-radius: 0px 0px var(--rounded-radius) var(--rounded-radius);
+        font-size: var(--fs-xxl);
+        color: var(--text-dark-color);
+    }
+    .bullet-card-image {
+        border-radius: var(--rounded-radius) var(--rounded-radius) 0px 0px;
+        background-color: var(--background-dark-gray);
+        width: 100%;
+    }
+}

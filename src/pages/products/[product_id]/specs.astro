@@ -1,0 +1,106 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+import TitleSubtitle from "../../../components/TitleSubtitle.astro";
+import ProductNav from "../../../components/ProductNav.astro";
+import BulletList from "../../../components/BulletList.astro";
+import SpecTable from "../../../components/SpecTable.astro";
+import {
+    getAllProductIds,
+    getProductData,
+} from "../../../product_data/get-product-data";
+import { getProductAssetPath } from "../../../utils/get-asset-path";
+import "../../../styles/specs.css";
+import { getLang } from "../../../utils/get-lang";
+
+export async function getStaticPaths() {
+    const productIds = getAllProductIds();
+
+    return productIds.map((id) => ({
+        params: { product_id: id },
+    }));
+}
+
+const { product_id } = Astro.params;
+const language = getLang();
+
+const product = getProductData(product_id, language);
+
+// SSG should never get here because it will only generate valid keys
+if (!product) {
+    throw Astro.redirect("/404");
+}
+---
+
+<PageLayout
+    title={`${product.general.name} | Especificações | Soop`}
+    description={`Especificações técnicas do ${product.general.name}`}
+>
+    <div class="product-page">
+        <section class="light-section center">
+            <TitleSubtitle
+                title={product.general.name}
+                subtitle="Especificações"
+            />
+            <div class="two-columns">
+                <p class="side-paragraph">{product.specs.abstract}</p>
+                <img
+                    src={getProductAssetPath(
+                        product_id,
+                        product.specs.productLineart
+                    )}
+                    alt="Especificações técnicas"
+                />
+            </div>
+        </section>
+
+        <ProductNav
+            title={product.general.name}
+            selected={1}
+            purchaseLink={product.general.purchaseLink}
+            productSlug={product_id}
+        />
+
+        <section class="light-section center">
+            <SpecTable specs={product.specs.specTable} />
+            <img
+                class="spec-image"
+                src={getProductAssetPath(product_id, product.specs.specImage)}
+                alt="Detalhes técnicos"
+            />
+            <p class="long-paragraph">{product.specs.additional}</p>
+        </section>
+
+        <section class="dark-section center">
+            <div class="two-columns">
+                <BulletList items={product.specs.qualiyPoints} />
+                <img
+                    class="right internals-pic"
+                    src={getProductAssetPath(
+                        product_id,
+                        product.specs.internalsPic
+                    )}
+                    alt="Interior do produto"
+                />
+            </div>
+            <div class="two-columns">
+                <img
+                    class="left rounded"
+                    src={getProductAssetPath(
+                        product_id,
+                        product.specs.contentsPic
+                    )}
+                    alt="Conteúdo da caixa"
+                />
+                <div>
+                    <BulletList
+                        title={true}
+                        items={[
+                            "Conteúdo da caixa:",
+                            ...product.specs.boxContents,
+                        ]}
+                    />
+                </div>
+            </div>
+        </section>
+    </div>
+</PageLayout>

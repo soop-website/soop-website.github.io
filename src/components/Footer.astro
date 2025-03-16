@@ -1,0 +1,47 @@
+---
+import "./Footer.css";
+import "./FooterMobile.css";
+
+import { Image } from "astro:assets";
+
+import MailIcon from "../assets/icons/mail.svg";
+import WhatsappIcon from "../assets/icons/whatsapp.svg";
+import TikTokIcon from "../assets/icons/tiktok.svg";
+import InstagramIcon from "../assets/icons/instagram.svg";
+import YoutubeIcon from "../assets/icons/youtube.svg";
+---
+
+<footer>
+    <div class="contact-info">
+        <div class="mail">
+            <a href="mailto:hello@soop.studio">
+                <Image src={MailIcon} alt="Email" />
+                hello@soop.studio
+            </a>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/554189042648">
+                <Image src={WhatsappIcon} alt="Whatsapp" />
+                +55 (41) 8904-2648
+            </a>
+        </div>
+    </div>
+    <div class="social-links">
+        <div class="socials-title">Redes Sociais</div>
+        <div class="social-icons">
+            <a href="https://tiktok.com/@soop.studio">
+                <Image src={TikTokIcon} class="social-icon" alt="TikTok" />
+            </a>
+            <a href="https://instagram.com/soop_br">
+                <Image
+                    src={InstagramIcon}
+                    class="social-icon"
+                    alt="Instagram"
+                />
+            </a>
+            <a href="https://youtube.com/@Soop.Studio">
+                <Image src={YoutubeIcon} class="social-icon" alt="Youtube" />
+            </a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,26 @@
+/* Hero */
+.hero-container {
+    font-size: var(--fs-hero);
+    font-weight: 700;
+}
+.hero-text {
+    width: 12ch;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 2ch;
+    margin-block: auto;
+    line-height: 1.1;
+}
+.hero-image {
+    width: 15ch;
+    aspect-ratio: .8;
+    object-fit: cover;
+}
+
+/* Long Paragraph */
+.long-paragraph {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: var(--fs-m);
+    text-indent: 3ch;
+}

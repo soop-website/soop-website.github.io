@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string;
+    subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="title-subtitle center">
+    <h1 class="ts-title">{title}</h1>
+    {subtitle && <p class="ts-subtitle">{subtitle}</p>}
+</div>
+
+<style>
+    @import "./TitleSubtitle.css";
+    @import "./TitleSubtitleMobile.css";
+</style>

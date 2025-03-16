@@ -1,0 +1,44 @@
+footer {
+    background-color: var(--background-medium-gray);
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    font-size: var(--fs-s);
+}
+a {
+    text-decoration: none;
+    color: var(--text-dark-color);
+}
+
+.contact-info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.mail, .whatsapp,
+.mail > a, .whatsapp > a {
+    display: flex;
+    align-items: center;
+}
+.mail > a > img,
+.whatsapp > a > img {
+    width: 1.5em;
+    margin-right: .4em;
+}
+
+.social-links {
+    margin-right: auto;
+    display: grid;
+    justify-items: center;
+    gap: .25em;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.social-icon {
+    margin: 0.3em 0.5em;
+    height: 2em;
+}

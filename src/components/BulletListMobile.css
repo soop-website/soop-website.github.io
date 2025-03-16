@@ -1,0 +1,9 @@
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .bl-list {
+        margin-block: 0 2rem;
+    }
+    .bl-list-title {
+        margin-top: 2rem;
+    }
+}

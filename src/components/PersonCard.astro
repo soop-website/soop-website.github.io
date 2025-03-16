@@ -1,0 +1,24 @@
+---
+interface Props {
+    name: string;
+    role: string;
+    photo: string;
+    inverted?: boolean;
+}
+
+const { name, role, photo, inverted = false } = Astro.props;
+---
+
+<div class={`person-card ${inverted ? "inverted" : ""}`}>
+    <div class="person-card-info">
+        <h2 class="person-card-name">{name}</h2>
+        <p class="person-card-role">{role}</p>
+        <p class="person-card-desc"><slot /></p>
+    </div>
+    <img class="person-card-photo" src={photo} alt="portrait photo" />
+</div>
+
+<style>
+    @import "./PersonCard.css";
+    @import "./PersonCardMobile.css";
+</style>

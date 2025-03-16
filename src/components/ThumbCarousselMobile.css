@@ -1,0 +1,21 @@
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .thumb-caroussel {
+        gap: 2rem;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .thumb-caroussel.multiple {
+        mask-image: linear-gradient(to left, transparent,
+        black 20%,
+        black 80%,
+        black 100%);
+    }
+
+    .tc-item {
+        min-width: 60vw;
+        height: 70vw;
+        font-size: var(--fs-l);
+    }
+    
+}

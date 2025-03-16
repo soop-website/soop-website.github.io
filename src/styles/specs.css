@@ -1,0 +1,19 @@
+.internals-pic {
+    align-self: center;
+    transform: translate(0, 1.6rem);
+}
+.spec-image {
+    width: 65%;
+    margin-bottom: 3rem;
+}
+
+/* mobile breakpoints */
+@media(max-width: 768px) {
+    .internals-pic {
+        transform: translate(0, -0.6rem);
+    }
+    .spec-image {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,35 @@
+---
+interface Props {
+    title: string;
+    selected: number;
+    purchaseLink: string;
+    productSlug: string;
+}
+
+const { title, selected, purchaseLink, productSlug } = Astro.props;
+
+// Build absolute paths for each link
+const overviewUrl = `/products/${productSlug}/`;
+const specsUrl = `/products/${productSlug}/specs/`;
+const filesUrl = `/products/${productSlug}/files/`;
+---
+
+<div class="product-nav">
+    <p class="pn-title">{title}</p>
+    <a
+        class={`pn-overview ${selected == 0 ? "pn-selected" : ""}`}
+        href={overviewUrl}>Visão Geral</a
+    >
+    <a class={`pn-specs ${selected == 1 ? "pn-selected" : ""}`} href={specsUrl}
+        >Especificações</a
+    >
+    <a class={`pn-files ${selected == 2 ? "pn-selected" : ""}`} href={filesUrl}
+        >Arquivos<span class="desktop-only"> e mais</span></a
+    >
+    <a class="pn-buy" href={purchaseLink} target="_blank">Comprar</a>
+</div>
+
+<style>
+    @import "./ProductNav.css";
+    @import "./ProductNavMobile.css";
+</style>

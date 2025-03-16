@@ -1,0 +1,69 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import TitleSubtitle from "../components/TitleSubtitle.astro";
+import PersonCard from "../components/PersonCard.astro";
+import "../styles/about.css";
+---
+
+<PageLayout
+    title="Sobre Nós | Soop"
+    description="Conheça a história e equipe da Soop"
+>
+    <section class="light-section max1200">
+        <TitleSubtitle title="Sobre Nós" />
+        <div class="two-columns">
+            <p class="side-paragraph left">
+                A Soop surgiu... Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptas velit esse officia, distinctio
+                tempora voluptatibus deleniti tenetur consequuntur omnis, natus
+                deserunt ducimus quia fugiat molestias, possimus quidem iste
+                repudiandae asperiores! Voluptas accusantium laboriosam ex in
+                architecto sunt natus quam repellendus, ea, iusto animi quis
+                beatae harum nisi minus ratione nobis modi? Eveniet deserunt et
+                eum hic id maxime facilis! Beatae!
+            </p>
+            <img
+                class="right logo-mockup"
+                src="/media/logo_mockup.webp"
+                alt=""
+            />
+        </div>
+    </section>
+    <section class="dark-section center max1200">
+        <TitleSubtitle title="Conheça a Equipe" />
+
+        <PersonCard
+            name="Yuri Kasper"
+            role="CEO"
+            photo="https://placehold.co/600?text=Foto+Yuri"
+        >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+        </PersonCard>
+
+        <PersonCard
+            inverted
+            name="Christian Kasper"
+            role="CTO"
+            photo="https://placehold.co/600?text=Foto+Max"
+        >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+        </PersonCard>
+
+        <PersonCard
+            name="Melissa Luna"
+            role="Head de Marketing"
+            photo="https://placehold.co/600?text=Foto+Melissa"
+        >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, optio quaerat ducimus deserunt eaque voluptatum in
+            dicta placeat, soluta atque illo molestias eligendi, reiciendis
+            repellendus doloremque cupiditate! Quisquam, quis totam.
+        </PersonCard>
+    </section>
+</PageLayout>
