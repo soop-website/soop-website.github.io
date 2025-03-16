@@ -4,6 +4,8 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Posthog from "../components/posthog.astro";
+
+import { getHtmlLang } from "../utils/get-lang";
 interface Props {
     title?: string;
     description?: string;
@@ -13,8 +15,7 @@ const { title = "Soop", description = "Default description for Soop website" } =
     Astro.props;
 ---
 
-<!-- TODO: get lang dynamically -->
-<html lang="en">
+<html lang={getHtmlLang()}>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -11,6 +11,17 @@ export function getLang(): Language {
     }
 }
 
+export function getHtmlLang(): string {
+    const lang = getLang();
+    switch (lang) {
+        case "en":
+            return "en";
+        case "pt":
+            return "pt-BR";
+    }
+    return "en";
+}
+
 export function getOutDir(): string {
     const baseOutDir = "dist";
     const lang = getLang();
