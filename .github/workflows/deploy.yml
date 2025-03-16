@@ -48,9 +48,9 @@ jobs:
               env:
                   LANG: pt
 
-            - name: Copy static files to dist root
+            - name: Copy public files to dist root
               run: |
-                  cp -r static/* dist/
+                  cp -r public/* dist/
 
             - name: Setup Pages
               uses: actions/configure-pages@v4
