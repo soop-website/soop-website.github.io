@@ -6,6 +6,8 @@ import { getLang } from "../utils/get-lang";
 
 import PageLayout from "../layouts/PageLayout.astro";
 import { getProductAssetPath } from "../utils/get-asset-path";
+import String from "../components/String.astro";
+import { getString } from "../utils/i18n/i18n";
 ---
 
 <PageLayout title="Soop" description="Soop Studio">
@@ -13,7 +15,7 @@ import { getProductAssetPath } from "../utils/get-asset-path";
         <section class="light-section">
             <div class="two-columns hero-container">
                 <div class="hero-text left">
-                    FRASE SOBRE PRODUTO VOLTADO PARA MÚSICOS
+                    <String key="home.hero.title" />
                 </div>
                 <img
                     class="hero-image right"
@@ -23,21 +25,24 @@ import { getProductAssetPath } from "../utils/get-asset-path";
             </div>
             <div class="top-3"></div>
             <p class="long-paragraph max1400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-                iusto laudantium quos nulla consequuntur aut eveniet enim
-                excepturi fugit, aliquid similique voluptatem. Quidem, minus
-                vero? Minima commodi beatae tenetur reiciendis. Reprehenderit,
-                earum vel, incidunt, eaque excepturi impedit dolorem provident
-                libero quaerat deleniti ut rem ea. Est laboriosam quos voluptas
-                reprehenderit deserunt, nostrum sit amet nobis natus, eos, hic
-                atque quaerat?
+                <String key="home.introduction" />
             </p>
         </section>
 
         <section class="dark-section center">
-            <BulletCard text="Intuitivo" image="media/render2.png" />
-            <BulletCard text="Acessível" image="media/render1.png" inverted />
-            <BulletCard text="Confiável" image="media/render3.png" />
+            <BulletCard
+                text={getString("home.features.1")}
+                image="media/render2.png"
+            />
+            <BulletCard
+                text={getString("home.features.2")}
+                image="media/render1.png"
+                inverted
+            />
+            <BulletCard
+                text={getString("home.features.3")}
+                image="media/render3.png"
+            />
         </section>
 
         <section class="light-section center">

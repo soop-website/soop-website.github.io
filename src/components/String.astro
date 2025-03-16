@@ -1,0 +1,13 @@
+---
+import type { I18nKeys } from "../utils/i18n/dictionary";
+import { getString } from "../utils/i18n/i18n";
+
+interface Props {
+    key: I18nKeys;
+}
+
+const { key } = Astro.props;
+const text = getString(key);
+---
+
+{text}

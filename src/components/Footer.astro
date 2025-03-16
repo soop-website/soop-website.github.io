@@ -9,30 +9,32 @@ import WhatsappIcon from "../assets/icons/whatsapp.svg";
 import TikTokIcon from "../assets/icons/tiktok.svg";
 import InstagramIcon from "../assets/icons/instagram.svg";
 import YoutubeIcon from "../assets/icons/youtube.svg";
+import String from "./String.astro";
+import { getString } from "../utils/i18n/i18n";
 ---
 
 <footer>
     <div class="contact-info">
         <div class="mail">
-            <a href="mailto:hello@soop.studio">
+            <a href={`mailto:${getString("footer.email")}`}>
                 <Image src={MailIcon} alt="Email" />
-                hello@soop.studio
+                <String key="footer.email" />
             </a>
         </div>
         <div class="whatsapp">
             <a href="https://wa.me/554189042648">
                 <Image src={WhatsappIcon} alt="Whatsapp" />
-                +55 (41) 8904-2648
+                <String key="footer.whatsapp" />
             </a>
         </div>
     </div>
     <div class="social-links">
-        <div class="socials-title">Redes Sociais</div>
+        <div class="socials-title"><String key="footer.socials" /></div>
         <div class="social-icons">
             <a href="https://tiktok.com/@soop.studio">
                 <Image src={TikTokIcon} class="social-icon" alt="TikTok" />
             </a>
-            <a href="https://instagram.com/soop_br">
+            <a href={getString("footer.instagram-link")}>
                 <Image
                     src={InstagramIcon}
                     class="social-icon"

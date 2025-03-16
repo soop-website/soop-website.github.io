@@ -5,6 +5,6 @@ import { getOutDir, getPathForLang } from "./src/utils/get-lang";
 // https://astro.build/config
 export default defineConfig({
     outDir: getOutDir(),
-    base: getPathForLang("/"),
+    base: getPathForLang(""),
     image: { service: passthroughImageService() },
 });

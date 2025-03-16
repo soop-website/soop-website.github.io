@@ -3,14 +3,15 @@ import PageLayout from "../layouts/PageLayout.astro";
 import TitleSubtitle from "../components/TitleSubtitle.astro";
 import PersonCard from "../components/PersonCard.astro";
 import "../styles/about.css";
+import { getString } from "../utils/i18n/i18n";
 ---
 
 <PageLayout
-    title="Sobre Nós | Soop"
-    description="Conheça a história e equipe da Soop"
+    title={`${getString("about.title")} | Soop`}
+    description={getString("about.page-description")}
 >
     <section class="light-section max1200">
-        <TitleSubtitle title="Sobre Nós" />
+        <TitleSubtitle title={getString("about.title")} />
         <div class="two-columns">
             <p class="side-paragraph left">
                 A Soop surgiu... Lorem, ipsum dolor sit amet consectetur
@@ -30,7 +31,7 @@ import "../styles/about.css";
         </div>
     </section>
     <section class="dark-section center max1200">
-        <TitleSubtitle title="Conheça a Equipe" />
+        <TitleSubtitle title={getString("about.meet-the-team")} />
 
         <PersonCard
             name="Yuri Kasper"
@@ -57,7 +58,7 @@ import "../styles/about.css";
 
         <PersonCard
             name="Melissa Luna"
-            role="Head de Marketing"
+            role={getString("about.head-of-marketing")}
             photo="https://placehold.co/600?text=Foto+Melissa"
         >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.

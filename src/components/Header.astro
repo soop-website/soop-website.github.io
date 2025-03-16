@@ -5,6 +5,8 @@ import "./HeaderMobile.css";
 import menuIcon from "../assets/icons/menu.svg";
 import closeIcon from "../assets/icons/close.svg";
 import { getLangSwitchPath, getPathForLang } from "../utils/get-lang";
+import String from "./String.astro";
+import { getString } from "../utils/i18n/i18n";
 
 const menuIconUrl = menuIcon.src;
 const closeIconUrl = closeIcon.src;
@@ -26,11 +28,22 @@ const closeIconUrl = closeIcon.src;
                     />
                 </a>
             </li>
-            <li><a href={getPathForLang("/")}>Home</a></li>
-            <li><a href={getPathForLang("/products")}>Produtos</a></li>
-            <li><a href={getPathForLang("/about")}>Sobre Nós</a></li>
+            <li>
+                <a href={getPathForLang("/")}><String key="header.home" /></a>
+            </li>
+            <li>
+                <a href={getPathForLang("/products")}
+                    ><String key="header.products" /></a>
+            </li>
+            <li>
+                <a href={getPathForLang("/about")}
+                    ><String key="header.about" /></a>
+            </li>
             <li class="location-switch">
-                <a href={getLangSwitchPath()} title="Ir para Soop Global">
+                <a
+                    href={getLangSwitchPath()}
+                    title={getString("header.switch-location")}
+                >
                     🌐
                 </a>
             </li>

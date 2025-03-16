@@ -5,16 +5,17 @@ import TitleSubtitle from "../../components/TitleSubtitle.astro";
 import { getAllProducts } from "../../../product_data/get-product-data";
 import { getLang } from "../../utils/get-lang";
 import { getProductAssetPath } from "../../utils/get-asset-path";
+import { getString } from "../../utils/i18n/i18n";
 ---
 
 <PageLayout
-    title="Produtos | Soop"
-    description="Confira os produtos da Soop Studio"
+    title={`${getString("products.title")} | Soop`}
+    description={getString("products.page-description")}
 >
     <section class="light-section center">
         <TitleSubtitle
-            title="Produtos"
-            subtitle="Confira nossa linha de produtos:"
+            title={getString("products.title")}
+            subtitle={getString("products.subtitle")}
         />
         {
             getAllProducts(getLang()).map((product, index) => {
