@@ -1,7 +1,7 @@
 export type Language = "en" | "pt";
 
 export function getLang(): Language {
-    const lang = import.meta.env.LANG;
+    const lang = process.env.LANG;
     switch (lang) {
         case "en":
         case "pt":
